@@ -1,0 +1,47 @@
+{
+    "Find Function": {
+        "Find": "find (arg1)"
+    },
+    
+    "Basic Motion": {
+        "nav": "nav_goal(arg1)"
+    },
+    
+    "Task Plans": {
+        "Open": "open (arg1)",
+        "Close": "close (arg1)",
+        "Drop": "drop (arg1)",
+        "Grab": "grab (arg1)",
+        "Insert": "plug_in (arg1)",
+        "Extract": "plug_out (arg1)",
+        "Pull": "pull (arg1)",
+        "Push": "push (arg1)",
+        "Lift": "lift (arg1)",
+        "Extend": "stretch (arg1)",
+        "Hold": "hold (arg1)",
+        "Place On Top": "put_on (arg1,arg2)",
+        "Put In": "put_in (arg1)",
+        "Put Back": "put_back (arg1)"
+    },
+
+    "Objects":{
+        "Banana": "Banana",
+        "Cup": "Cup",
+        "Bottle": "Bottle",
+        "Bowl": "Bowl",
+        "Mango": "Mango",
+        "Apple": "Apple"
+    },
+
+    "Locations":{
+        "Cabinet1": "cabinet1",
+        "Cabinet2": "cabinet2",
+        "Cabinet3": "cabinet3",
+        "Desk1": "desk1",
+        "Desk2": "desk2",
+        "Desk3": "desk3",
+        "Desk4": "desk4",
+        "Desk5": "desk5",
+        "Fridge": "fridge"
+    }
+}

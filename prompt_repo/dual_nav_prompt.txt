@@ -1,0 +1,28 @@
+//TaskPlans
+MATCH (actions:ActionPrimitive)-[:BELONGS_TO]->(tp:TaskPlan)
+WHERE actions.name = 'find'
+RETURN actions, '1_find' AS Order
+UNION ALL
+MATCH (actions:ActionPrimitive)-[:BELONGS_TO]->(tp:TaskPlan)
+WHERE actions.name = 'nav_goal'
+RETURN actions, '2_nav_goal' AS Order
+UNION ALL
+MATCH (actions:ActionPrimitive)-[:BELONGS_TO]->(tp:TaskPlan)
+WHERE actions.name = 'grab'
+RETURN actions, '3_grab' AS Order
+UNION ALL
+MATCH (actions:ActionPrimitive)-[:BELONGS_TO]->(tp:TaskPlan)
+WHERE actions.name = 'nav_goal'
+RETURN actions, '4_nav_goal' AS Order
+UNION ALL
+MATCH (actions:ActionPrimitive)-[:BELONGS_TO]->(tp:TaskPlan)
+WHERE actions.name = 'put_on'
+RETURN actions, '5_put_on' AS Order
+
+//Object
+MATCH (obj:Object) WHERE obj.name = 'Apple' RETURN obj.name AS ObjectName, properties(obj) AS Properties
+
+//Locations
+MATCH (loc:Location)-[:BELONGS_TO]->(env:IndoorEnv) WHERE loc.name = 'desk1' RETURN loc.name AS LocationName, properties(loc) AS Properties
+UNION ALL
+MATCH (loc:Location)-[:BELONGS_TO]->(env:IndoorEnv) WHERE loc.name = 'desk5' RETURN loc.name AS LocationName, properties(loc) AS Properties        

@@ -1,0 +1,13 @@
+//TaskPlans
+MATCH (actions:ActionPrimitive)-[:BELONGS_TO]->(tp:TaskPlan)
+WHERE actions.name = 'find'
+RETURN actions, '1_find' AS Order
+UNION ALL
+MATCH (actions:ActionPrimitive)-[:BELONGS_TO]->(tp:TaskPlan)
+WHERE actions.name = 'grab'
+RETURN actions, '2_grab' AS Order
+
+//Object
+MATCH (obj:Object) WHERE obj.name = 'Apple' RETURN obj.name AS ObjectName, properties(obj) AS Properties
+
+       
